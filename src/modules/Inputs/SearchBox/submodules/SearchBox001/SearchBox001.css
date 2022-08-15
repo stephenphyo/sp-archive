@@ -1,0 +1,31 @@
+#searchbox001 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#searchbox001 #searchbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+    background-color: #2f3640;
+}
+
+#search_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #e84118;
+    background: #2f3640;
+}

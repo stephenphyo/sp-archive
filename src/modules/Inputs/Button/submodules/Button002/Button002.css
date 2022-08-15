@@ -1,0 +1,58 @@
+#button002 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* https://www.youtube.com/watch?v=iLTsfFFGzl4&list=WL&index=16&ab_channel=OnlineTutorials */
+#button002 #button {
+    --width: 100px;
+    --height: 35px;
+    --font-size: 14px;
+    --font-family: 'Helvetica Neue';
+    --text-color: #000000;
+    --pre-color: cyan;
+    --post-color: violet;
+    --transition: 1.5s;
+}
+
+#button002 #button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+    letter-spacing: 0.5px;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+#button002 #button svg,
+#button002 #button svg rect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+}
+
+#button002 #button svg rect {
+    stroke: var(--pre-color);
+    stroke-width: calc(var(--width) / 25);
+    stroke-dasharray: var(--width) var(--height);
+    stroke-dashoffset: calc(calc(var(--height) * 2) + calc(var(--width) * 2));
+    transition: var(--transition) ease-in-out;
+}
+
+#button002 #button:hover svg rect {
+    stroke: var(--post-color);
+    stroke-dasharray: calc(calc(var(--width) * 2) + calc(var(--height) * 2));
+    stroke-dashoffset: 0;
+}

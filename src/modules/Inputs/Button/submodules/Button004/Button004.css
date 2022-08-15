@@ -1,0 +1,112 @@
+#button004 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    gap: 15px;
+}
+
+/* https://www.youtube.com/watch?v=fDm0WJ_66d0&list=WL&index=15&ab_channel=DarkCode */
+#button004 #button {
+    --width: 40px;
+    --height: 40px;
+    --icon-size: 24px;
+}
+
+.facebook {
+    --logo-color: #1877f2;
+}
+
+.twitter {
+    --logo-color: #1da1f2;
+}
+
+.google {
+    --logo-color: #4285f4;
+}
+
+.instagram {
+    --logo-color: #dd2a7b;
+}
+
+.youtube {
+    --logo-color: #ff0000;
+}
+
+.telegram {
+    --logo-color: #229ed9;
+}
+
+.whatsapp {
+    --logo-color: #00bb2d;
+}
+
+.discord {
+    --logo-color: #7289d9;
+    --icon-size: 22px !important;
+}
+
+.wechat {
+    --logo-color: #2fbb19;
+}
+
+#button004 #button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+    border-radius: 30%;
+    overflow: hidden;
+    color: var(--logo-color);
+    background: #f1f1f1;
+    box-shadow: 0 calc(var(--height) / 8) calc(var(--height) / 2.67) calc(var(--height) / -8) #00000070;
+    cursor: pointer;
+}
+
+#button004 #button i {
+    line-height: var(--height);
+    font-size: var(--icon-size);
+    transition: 0.2s linear;
+}
+
+#button004 #button:hover i {
+    color: #f1f1f1;
+    transform: scale(1.1);
+}
+
+#button004 #button::before {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: var(--logo-color);
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+
+#button004 #button:hover::before {
+    top: -10%;
+    left: -10%;
+    animation: button004 0.7s 1;
+}
+
+@keyframes button004 {
+    0% {
+        top: 90%;
+        left: -110%;
+    }
+    50% {
+        top: -30%;
+        left: 10%;
+    }
+    100% {
+        top: -10%;
+        left: -10%;
+    }
+}

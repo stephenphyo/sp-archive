@@ -1,0 +1,47 @@
+#checkbox003 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#checkbox003 #checkbox {
+    --size: 60px;
+}
+
+#checkbox003 #checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+#checkbox003 #checkbox input[type='checkbox'] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: #f00;
+    box-shadow:
+        0 calc(var(--size) / 20) calc(var(--size) / 15) rgba(0, 0, 0, 1),
+        inset 0 calc(var(--size) / -30) calc(var(--size) / 12) rgba(0, 0, 0, 0.8),
+        inset 0 calc(var(--size) / 30) calc(var(--size) / 30) rgba(255, 255, 255, 0.5),
+        0 0 0 calc(var(--size) / 30) #000,
+        0 0 0 calc(var(--size) / 12) #0c0c0c,
+        0 0 0 calc(var(--size) / 10)#f00;
+    cursor: pointer;
+}
+
+#checkbox003 #checkbox input[type='checkbox']:checked {
+    background-color: #0f0;
+    box-shadow:
+        0 calc(var(--size) / 20) calc(var(--size) / 15) rgba(0, 0, 0, 1),
+        inset 0 calc(var(--size) / -30) calc(var(--size) / 12) rgba(0, 0, 0, 0.8),
+        inset 0 calc(var(--size) / 30) calc(var(--size) / 30) rgba(255, 255, 255, 0.5),
+        0 0 0 calc(var(--size) / 30) #000,
+        0 0 0 calc(var(--size) / 12) #0c0c0c,
+        0 0 0 calc(var(--size) / 10)#0f0;
+}

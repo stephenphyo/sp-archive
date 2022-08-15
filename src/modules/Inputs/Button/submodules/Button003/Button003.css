@@ -1,0 +1,56 @@
+#button003 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+}
+
+/* https://www.youtube.com/watch?v=Ust0aZJSwWk&list=WL&index=25&ab_channel=CodingWang */
+#button003 #button {
+    --width: 100px;
+    --height: 40px;
+}
+
+#button003 #button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--width);
+    height: var(--height);
+    font-family: 'Helvetica Neue', 'Times New Roman', 'sans-serif';
+    font-size: calc(var(--width) / 6);
+    font-weight: bold;
+    border: calc(var(--height) / 10) solid transparent;
+    border-radius: calc(var(--height) / 2);
+    color: #ffffff;
+    background-color: #262626;
+    box-shadow: calc(var(--width) / 300) calc(var(--height) / 100) calc(var(--height) / 2.5) #000000;
+    cursor: pointer;
+}
+
+#button003 #button:hover {
+    animation: button003 2s linear infinite;
+    box-shadow: calc(var(--width) / 300) calc(var(--height) / 100) calc(var(--height) / 1.67) #d60000;
+}
+
+@keyframes button003 {
+    25% {
+        border-right-color: #d90000;
+        filter: hue-rotate(25deg);
+    }
+    50% {
+        border-bottom-color: #d90000;
+        filter: hue-rotate(100deg);
+    }
+    75% {
+        border-left-color: #d90000;
+        filter: hue-rotate(200deg);
+    }
+    100% {
+        border-top-color: #d90000;
+        filter: hue-rotate(360deg);
+    }
+}
