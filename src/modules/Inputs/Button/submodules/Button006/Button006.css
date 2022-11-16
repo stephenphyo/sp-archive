@@ -1,0 +1,75 @@
+#button006 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #28272a;
+}
+
+/* https://www.youtube.com/watch?v=L-tPKFxrvLk&list=WL&index=30&t=208s&ab_channel=OnlineTutorials */
+#button006 #button {
+    --width: 200px;
+    --height: 60px;
+}
+
+#button006 #button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+    padding-left: calc(var(--width) / 5);
+    border-top: 0.5px solid rgba(255, 255, 255, 0.35);
+    border-left: 0.5px solid rgba(255, 255, 255, 0.35);
+    text-decoration: none;
+    letter-spacing: 2px;
+    border-radius: var(--height);
+    overflow: hidden;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#button006 #button:hover {
+    padding-left: 0px;
+    padding-right: calc(var(--width) / 5);
+    color: rgba(255, 255, 255, 1);
+}
+
+#button006 #button span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: calc(var(--width) / 40);
+    width: calc(var(--width) / 4);
+    height: calc(var(--width) / 4);
+    font-size: 1em;
+    color: #1c1c1c;
+    background-color: #04fe4d;
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+}
+
+#button006 #button:hover span {
+    left: calc(100% - calc(var(--width) / 40) - calc(var(--width) / 4));
+}
+
+#button006 #button:after {
+    content: ' ';
+    position: absolute;
+    width: calc(var(--width) / 2);
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateX(calc(var(--width) * -0.9)) skewX(30deg);;
+    transition: 0.75s ease-in-out;
+    z-index: 1;
+}
+
+#button006 #button:hover:after {
+    transform: translateX(calc(var(--width) * 0.9)) skewX(30deg);
+}

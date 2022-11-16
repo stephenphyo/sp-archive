@@ -14,6 +14,7 @@ import Sidebar from 'components/Sidebar/Sidebar';
 import Button from 'modules/Inputs/Button/Button';
 import Checkbox from 'modules/Inputs/Checkbox/Checkbox';
 import ToggleButton from 'modules/Inputs/ToggleButton/ToggleButton';
+import RadioButton from 'modules/Inputs/RadioButton/RadioButton';
 import Slider from 'modules/Inputs/Slider/Slider';
 import SearchBox from 'modules/Inputs/SearchBox/SearchBox';
 
@@ -42,7 +43,8 @@ function App() {
                             {/* Inputs */}
                             <Route path='/inputs/button' element={<Button />} />
                             <Route path='/inputs/checkbox' element={<Checkbox />} />
-                            <Route path='/inputs/togglebutton' element={<ToggleButton />} />
+                            <Route path='/inputs/toggle' element={<ToggleButton />} />
+                            <Route path='/inputs/radio' element={<RadioButton />} />
                             <Route path='/inputs/slider' element={<Slider />} />
                             <Route path='/inputs/searchbox' element={<SearchBox />} />
 

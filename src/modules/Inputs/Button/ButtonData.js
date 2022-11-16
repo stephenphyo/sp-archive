@@ -296,6 +296,196 @@ const module_data = {
             left: -10%;
         }
     }
+    `,
+
+    5:
+    `
+    /* HTML */
+    <div id='button'>
+        Button/Icon
+    </div>
+
+    /* CSS Styles */
+    /* https: //www.youtube.com/watch?v=GXYESjILPzU&ab_channel=WebD */
+    #button {
+        --size: 80px;
+    }
+
+    #button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: var(--size);
+        height: var(--size);
+        box-sizing: border-box;
+        border-radius: calc(var(--size) / 10);
+        color: rgb(3, 212, 132);
+        background-color: #ffffff;
+        box-shadow:
+            calc(var(--size) / -24) calc(var(--size) / -24) calc(var(--size) / 12) #ffffff,
+            calc(var(--size) / 24) calc(var(--size) / 24) calc(var(--size) / 8) #6687a8,
+            inset calc(var(--size) / -24) calc(var(--size) / -24) calc(var(--size) / 12) #6687a8,
+            inset calc(var(--size) / 24) calc(var(--size) / 24) calc(var(--size) / 12) #ffffff;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    #button:hover {
+        box-shadow:
+            0px 0px 0px #ffffff,
+            0px 0px 0px #6687a8,
+            inset calc(var(--size) / -24) calc(var(--size) / -24) calc(var(--size) / 12) #6687a8,
+            inset calc(var(--size) / 24) calc(var(--size) / 24) calc(var(--size) / 12) #ffffff;
+    }
+    `,
+
+    6:
+    `
+    /* HTML */
+    <div id='button'>
+        <span>{'\u279c'}</span>
+        Button
+    </div>
+
+    /* CSS Styles */
+    /* https://www.youtube.com/watch?v=L-tPKFxrvLk&list=WL&index=30&t=208s&ab_channel=OnlineTutorials */
+    #button {
+        --width: 200px;
+        --height: 60px;
+    }
+
+    #button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: var(--width);
+        height: var(--height);
+        padding-left: calc(var(--width) / 5);
+        border-top: 0.5px solid rgba(255, 255, 255, 0.35);
+        border-left: 0.5px solid rgba(255, 255, 255, 0.35);
+        text-decoration: none;
+        letter-spacing: 2px;
+        border-radius: var(--height);
+        overflow: hidden;
+        color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.1);
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    #button:hover {
+        padding-left: 0px;
+        padding-right: calc(var(--width) / 5);
+        color: rgba(255, 255, 255, 1);
+    }
+
+    #button span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: calc(var(--width) / 40);
+        width: calc(var(--width) / 4);
+        height: calc(var(--width) / 4);
+        font-size: 1em;
+        color: #1c1c1c;
+        background-color: #04fe4d;
+        border-radius: 50%;
+        transition: 0.5s ease-in-out;
+    }
+
+    #button:hover span {
+        left: calc(100% - calc(var(--width) / 40) - calc(var(--width) / 4));
+    }
+
+    #button:after {
+        content: ' ';
+        position: absolute;
+        width: calc(var(--width) / 2);
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.25);
+        transform: translateX(calc(var(--width) * -0.9)) skewX(30deg);;
+        transition: 0.75s ease-in-out;
+        z-index: 1;
+    }
+
+    #button:hover:after {
+        transform: translateX(calc(var(--width) * 0.9)) skewX(30deg);
+    }
+    `,
+
+    7:
+    `
+    /* HTML */
+    <div id='button'><span>Button</span></div>
+    <div id='button'><span id='heart'>{'\u2764'}</span></div>
+
+    /* CSS Styles */
+    * https: //www.youtube.com/watch?v=83qXTul1oP4&list=WL&index=16&ab_channel=OnlineTutorials */
+    @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Roboto+Slab:wght@200&family=Roboto:wght@500&display=swap');
+
+    #button {
+        --size: 100px;
+    }
+
+    #button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: var(--size);
+        height: var(--size);
+        border-radius: 50%;
+        text-shadow: -2px -2px 5px #ffffff;
+        font-family: 'Courgette', cursive;
+        font-size: calc(var(--size) / 4.25);
+        color: #333333;
+        filter: drop-shadow(calc(var(--size) / 30) calc(var(--size) / 30) calc(var(--size) / 15) #ffffff);
+        box-shadow:
+            calc(var(--size) / 15) calc(var(--size) / 15) calc(var(--size) / 15) rgba(0, 0, 0, 0.05),
+            calc(var(--size) / 15) calc(var(--size) / 15) calc(var(--size) / 7.5) rgba(0, 0, 0, 0.05),
+            inset calc(var(--size) / 15) calc(var(--size) / 15) calc(var(--size) / 15) rgba(0, 0, 0, 0.05),
+            inset calc(var(--size) / -15) calc(var(--size) / -15) calc(var(--size) / 10) rgba(255, 255, 255, 0.9);
+    }
+
+    #button:before {
+        content: '';
+        position: absolute;
+        top: calc(var(--size) / 4.5);
+        left: calc(var(--size) / 6);
+        width: calc(var(--size) / 7.5);
+        height: calc(var(--size) / 7.5);
+        border-radius: 50%;
+        background-color: #ffffff;
+        filter: blur(calc(var(--size) / 75));
+    }
+
+    #button:after {
+        content: '';
+        position: absolute;
+        top: calc(var(--size) / 6);
+        left: calc(var(--size) / 3);
+        width: calc(var(--size) / 15);
+        height: calc(var(--size) / 15);
+        border-radius: 50%;
+        background-color: #ffffff;
+        filter: blur(calc(var(--size) / 75));
+    }
+
+    #button:hover {
+        box-shadow:
+            calc(var(--size) / 15) calc(var(--size) / 15) calc(var(--size) / 15) rgba(0, 0, 0, 0.08),
+            calc(var(--size) / 15) calc(var(--size) / 15) calc(var(--size) / 7.5) rgba(0, 0, 0, 0.08),
+            inset calc(var(--size) / 15) calc(var(--size) / 15) calc(var(--size) / 15) rgba(0, 0, 0, 0.08),
+            inset calc(var(--size) / -15) calc(var(--size) / -15) calc(var(--size) / 10) rgba(255, 255, 255, 0.9);
+        cursor: pointer;
+    }
+
+    #button #heart {
+        font-size: calc(var(--size) / 2);
+        color: #ff5353;
+    }
     `
 }
 

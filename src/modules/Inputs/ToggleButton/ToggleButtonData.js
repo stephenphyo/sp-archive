@@ -1,6 +1,11 @@
 const togglebutton_data = {
     1 :
     `
+    /* HTML */
+    <div id='toggle'>
+        <input type='checkbox' />
+    </div>
+
     /* CSS Style */
     #toggle {
         --width: 100px;
@@ -206,6 +211,62 @@ const togglebutton_data = {
     3:
     `
     /* HTML */
+    <div id='toggle'>
+        <input type='checkbox' />
+    </div>
+
+    /* CSS Styles */
+    #toggle {
+        --width: 40px;
+        --height: 20px;
+        --background-color: #63cdff;
+        --transition: 0.4s;
+    }
+
+    #toggle {
+        position: absolute;
+    }
+
+    #toggle input[type='checkbox'] {
+        appearance: none;
+        -webkit-appearance: none;
+        position: relative;
+        width: var(--width);
+        height: var(--height);
+        outline: none;
+        border-radius: calc(var(--height) / 2);
+        background: gray;
+        cursor: pointer;
+    }
+
+    #toggle input[type='checkbox']:checked {
+        background: var(--background-color);
+    }
+
+    #toggle input[type='checkbox']::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calc(var(--width) / 2);
+        height: calc(var(--width) / 2);
+        border-radius: 20px;
+        transform: scale(0.8);
+        transition: var(--transition);
+        background-color: #ffffff;
+    }
+
+    #toggle input[type='checkbox']:checked::before {
+        left: calc(var(--width) / 2);
+    }
+    `,
+
+    4:
+    `
+    /* HTML */
+    <div id='toggle'>
+        <input type='checkbox' />
+    </div>
 
     /* CSS Styles */
     /* https://www.youtube.com/watch?v=JcU0tKqZ3b4&list=WL&index=32&ab_channel=OnlineTutorials */

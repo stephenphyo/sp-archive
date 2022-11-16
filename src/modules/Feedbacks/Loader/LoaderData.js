@@ -145,6 +145,56 @@ const loader_data = {
             transform: rotate(360deg);
         }
     }
+    `,
+
+    4:
+    `
+    /* HTML */
+    <div id='loader'>
+        <div id='loader_outer'>
+            <div id='loader_inner'></div>
+        </div>
+    </div>
+
+    /* CSS Styles */
+    /* https://www.youtube.com/watch?v=momUJFKwUGo&list=WL&index=30&t=7s&ab_channel=CODEWITHHOSSEIN */
+    #loader {
+        --diameter: 60px;
+    }
+
+    #loader {
+        width: var(--diameter);
+        height: var(--diameter);
+    }
+
+    #loader #loader_outer {
+        width: 100%;
+        height: 100%;
+        border: calc(var(--diameter) / 10) solid transparent;
+        border-top-color: #4bc8eb;
+        border-bottom-color: #f13a8f;
+        border-radius: 50%;
+        animation: rotate 5s linear infinite;
+    }
+
+    #loader #loader_inner {
+        width: 100%;
+        height: 100%;
+        border: calc(var(--diameter) / 10) solid transparent;
+        border-top-color: #36f372;
+        border-bottom-color: #ffffff;
+        border-radius: 50%;
+        animation: rotate 4s linear infinite;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: scale(1) rotate(360deg);
+        }
+        50% {
+            transform: scale(0.6) rotate(-360deg);
+        }
+    }
     `
 }
 

@@ -3,10 +3,11 @@ export const data = [
         text: 'Inputs',
         children: [
             { text: 'Checkbox', url: '/inputs/checkbox' },
-            { text: 'Toggle Button', url: '/inputs/togglebutton' },
+            { text: 'Toggle Button', url: '/inputs/toggle' },
             { text: 'Button', url: '/inputs/button' },
             { text: 'Slider', url: '/inputs/slider' },
             { text: 'Search Box', url: '/inputs/searchbox' },
+            { text: 'Radio Button', url: '/inputs/radio' },
         ]
     },
     {

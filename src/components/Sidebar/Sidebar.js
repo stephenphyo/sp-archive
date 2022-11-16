@@ -38,19 +38,11 @@ function Sidebar() {
         } else {
             setSidebarOpen(true);
         }
-    }, []);
-
-    useEffect(() => {
-        if (windowSize.width < 960) {
-            setSidebarOpen(false);
-        } else {
-            setSidebarOpen(true);
-        }
-    }, [windowSize.width]);
+    }, [windowSize.width, setSidebarOpen]);
 
     useEffect(() => {
         setActive(location.pathname)
-    }, [location]);
+    }, [location, setActive]);
 
     /* Sidebar Control */
     const listen = (e) => {
